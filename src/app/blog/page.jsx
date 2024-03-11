@@ -1,9 +1,13 @@
+import Card from '@/components/postCard/Card'
 import React from 'react'
-
+import styles from './page.module.css'
 const BlogPage = () => {
   return (
-    <div>
-      BlogPage
+    <div className={styles.container}>
+      <Card/>
+      <Card/>
+      <Card/>
+      <Card/>
     </div>
   )
 }
