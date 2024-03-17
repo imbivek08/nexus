@@ -18,3 +18,25 @@
     font-size: 80px;
     font-weight: bold;
 }
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.message textarea{
+    padding: 10px;
+    background-color: transparent;
+    width: 550px;
+    height: 200px;
+    color: wheat;
+    border: 1px solid wheat;
+    border-radius: 25px;
+}
+.message button{
+    width: 200px;
+    height: 45px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+}

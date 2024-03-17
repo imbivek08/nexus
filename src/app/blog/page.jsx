@@ -1,14 +1,19 @@
+
 import Card from '@/components/postCard/Card'
 import React from 'react'
 import styles from './page.module.css'
-const BlogPage = () => {
+import { getPosts } from '@/lib/data'
+const BlogPage = async() => {
+  const posts = await getPosts()
+  console.log(posts)
   return (
     <div className={styles.container}>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
+      
+      {posts.map((post)=>(
+        <Card post = {post} key={post.id}/>
+      ))}
     </div>
+    
   )
 }
 
