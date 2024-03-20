@@ -1,29 +1,27 @@
 import React from 'react'
 import styles from './singlePostPage.module.css'
 import Image from 'next/image'
-const SinglePageBlog = () => {
+import PostUser from '@/components/postUser/PostUser'
+import { getPost } from '@/lib/data'
+
+const SinglePageBlog = async({params}) => {
+  const {slug} = params
+  const post = await getPost(slug)
   return (
     <div className={styles.container}>
-      <div className={styles.image}>Image section </div>
+      <div className={styles.image}>Image section</div>
       <div className={styles.blog}> 
         <div>
-          <h1>Title</h1>
+          <h1>{post.title}</h1>
         </div>
         <div className={styles.details}>
           <div >
-            <Image className={styles.profile}  src="/profile2.jpeg" width={50} height={50}/>
+            <Image className={styles.profile}  src="/profile2.jpeg" width={50} height={50} alt='pic'/>
           </div>
-          <div>
-            <h5>Author</h5>
-            <p>Author Name</p>
-          </div>
-          <div>
-            <h5>Published</h5>
-            <p>17-03-2024</p>
-          </div>
+         <PostUser userId={post.userId}/>
         </div>
         <div>
-          Desc
+          {post.desc}
         </div>
       </div>
     </div>

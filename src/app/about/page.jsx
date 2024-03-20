@@ -4,7 +4,7 @@ import React from 'react'
 const AboutPage = () => {
   return (
     <div>
-      <Card/>
+      About Page
     </div>
   )
 }
