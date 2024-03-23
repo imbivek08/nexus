@@ -3,7 +3,6 @@ import styles from "./postCard.module.css";
 import Image from "next/image";
 import Link from "next/link";
 const Card = ({post}) => {
-  console.log(post)
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -13,7 +12,7 @@ const Card = ({post}) => {
       <div className={styles.buttom}>
         <h3>{post.title}</h3>
         <p>
-          {post.desc}
+        {post.desc.substring(0, post.desc.indexOf('.') + 1)}
         </p>
         <Link href={`/blog/${post.slug}`}>Read More</Link>
       </div>
