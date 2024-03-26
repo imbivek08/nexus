@@ -6,13 +6,6 @@
     align-items: center;
     justify-content: center;
 }
-.cread{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-
-}
 .providers{
     gap: 20px;
     display: flex;
